@@ -1,40 +1,50 @@
-/* css/style.css */
+/* style.css */
 
-/* Tải font Inter (Nếu bạn muốn đảm bảo font này hoạt động) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-/* Thiết lập font Inter cho toàn bộ trang */
+/* Thiết lập font Inter và màu nền chung cho toàn bộ trang */
 body {
     font-family: 'Inter', sans-serif;
-    /* Màu nền nhẹ nhàng, tươi mát */
-    background-color: #f7fdee;
+    background-color: #f7fdee; /* Màu nền nhẹ nhàng, tươi mát */
+    /* Đảm bảo toàn bộ trang kéo dài hết chiều cao */
+    min-height: 100vh;
 }
 
-/* Hiệu ứng cho thẻ sản phẩm (flower-card) */
+/* Kiểu cho Thẻ Hoa (Flower Card) */
 .flower-card {
+    /* Bóng đổ nhẹ nhàng */
     box-shadow: 0 0 20px rgba(100, 100, 100, 0.1);
+    /* Hiệu ứng chuyển động khi di chuột */
     transition: transform 0.3s ease;
 }
+
+/* Hiệu ứng di chuột lên thẻ hoa */
 .flower-card:hover {
-    /* Nâng nhẹ thẻ khi di chuột */
-    transform: translateY(-3px);
+    transform: translateY(-5px); /* Nhấc nhẹ thẻ lên 5px */
+    box-shadow: 0 10px 30px rgba(100, 100, 100, 0.2);
 }
 
-/* Hiệu ứng đóng/mở cho FAQ (accordion) */
+/* Kiểu cho Nội dung Accordion (phần ẩn/hiện) */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
+    /* Hiệu ứng đóng chậm */
     transition: max-height 0.4s ease-out;
 }
+
+/* Kiểu khi Accordion đang mở */
 .accordion-content.active {
-    /* Đặt giá trị đủ lớn để chứa nội dung (có thể điều chỉnh nếu nội dung quá dài) */
-    max-height: 500px;
+    /* Đặt giá trị đủ lớn để chứa nội dung (có thể cần tăng nếu nội dung dài hơn) */
+    max-height: 1000px; 
+    /* Hiệu ứng mở mượt mà hơn */
     transition: max-height 0.6s ease-in;
 }
 
-/* Các tùy chỉnh nhỏ nếu cần */
-.search-input:focus {
-    outline: none;
-    border-color: #4CAF50; /* Màu xanh lá nổi bật khi focus */
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+/* Tùy chỉnh nhỏ cho thanh tìm kiếm (Giả định ID là #flower-search) */
+#flower-search {
+    border: 2px solid #84cc16; 
+    transition: border-color 0.3s;
+}
+
+#flower-search:focus {
+    border-color: #22c55e; /* Màu xanh lá đậm hơn khi tập trung */
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
 }
