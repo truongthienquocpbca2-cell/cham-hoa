@@ -1,0 +1,40 @@
+/* css/style.css */
+
+/* Tải font Inter (Nếu bạn muốn đảm bảo font này hoạt động) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Thiết lập font Inter cho toàn bộ trang */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Màu nền nhẹ nhàng, tươi mát */
+    background-color: #f7fdee;
+}
+
+/* Hiệu ứng cho thẻ sản phẩm (flower-card) */
+.flower-card {
+    box-shadow: 0 0 20px rgba(100, 100, 100, 0.1);
+    transition: transform 0.3s ease;
+}
+.flower-card:hover {
+    /* Nâng nhẹ thẻ khi di chuột */
+    transform: translateY(-3px);
+}
+
+/* Hiệu ứng đóng/mở cho FAQ (accordion) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+.accordion-content.active {
+    /* Đặt giá trị đủ lớn để chứa nội dung (có thể điều chỉnh nếu nội dung quá dài) */
+    max-height: 500px;
+    transition: max-height 0.6s ease-in;
+}
+
+/* Các tùy chỉnh nhỏ nếu cần */
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Màu xanh lá nổi bật khi focus */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
