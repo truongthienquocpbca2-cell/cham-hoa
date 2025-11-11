@@ -8,7 +8,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Thiết lập font Inter cho toàn bộ trang */
-        body {
+        body  {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* Thiết lập nền để ảnh phủ kín toàn bộ viewport */
+            background-image: url('https://dienhoavip.vn/wp-content/uploads/2024/11/hinh-anh-hoa-dep-672eeb979cd04.webp'); /* Thay URL này bằng đường dẫn ảnh của bạn */
+            background-size: cover; /* Đảm bảo ảnh phủ kín toàn bộ khu vực, có thể bị cắt một phần */
+            background-position: center center; /* Căn giữa ảnh */
+            background-attachment: fixed; /* Giữ ảnh cố định khi cuộn (tùy chọn) */
+            background-repeat: no-repeat; /* Không lặp lại ảnh */
+        }
+                     {
             font-family: 'Inter', sans-serif;
             background-color: #f7fdee; /* Màu nền nhẹ nhàng, tươi mát */
         }
@@ -122,7 +134,7 @@
 
         <!-- Hướng Dẫn Chăm Sóc Hoa Đặc Trưng -->
         <section class="space-y-6" id="special-care">
-            <h2 class="text-3xl font-bold mb-4 text-emerald-700 text-center pt-6">
+            <h2 class="text-3xl font-bold mb-4 text-blue-100  text-center pt-6">
                 Hướng Dẫn Chăm Sóc Hoa Đặc Trưng
             </h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -964,10 +976,11 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12 p-6 text-center">
         <p class="text-sm">&copy; 2025 chăm sóc hoa. Tất cả bí quyết được sưu tầm và tổng hợp.</p>
-        <li> gồm các thành viên: Quốc;Bảo;Tân
+        <li> các thành viên tạo trang web: Quốc;Bảo;Tân
 </p2>
         <li> <a href="mailto:truongthienquoc.pbc.a2@gmail.com?subject=Yeu%20cau%20ho%20tro%20ve%20san%20pham&body=Xin%20chao%2C%20toi%20can%20ho%20tro%20voi%20" style="color: green; text-decoration: underline;">
     liên hệ bộ phận hỗ trợ
+        <li> <a href="https://drive.google.com/file/d/1ZAHys2xlJpp3OM3sdQ3UWhPtgJ-ZpHnr/view?usp=drivesdk" style="color: emerald; text-decoration: underline;">ứng dụng AI nhận diện hoa </a>
 </a></a>
     </footer>
 
